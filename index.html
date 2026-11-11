@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#132b2c"><title>A Chama do Pampa · Um lance de dados</title>
+<link rel="stylesheet" href="style.css"></head>
+<body data-screen="cover">
+<svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<symbol id="lantern" viewBox="0 0 48 54"><g stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" fill="none"><path d="M17 15V9a7 7 0 0 1 14 0v6M13 19l5-6h12l5 6-3 3H16zM14 23l-3 19 4 3h18l4-3-3-19M17 24l-2 16 4 3h10l4-3-2-16M14 46h20l2 4H12z"/><path d="M24 38c-7-2-4-7-1-11 0 4 5 4 4 8 3-2 2-4 2-4 5 8-2 10-5 7z" fill="currentColor" stroke-width=".7"/></g></symbol>
+<symbol id="map" viewBox="0 0 24 24"><path d="m3 5 6-2 6 3 6-2v15l-6 2-6-3-6 2zm6-2v15m6-12v15"/></symbol>
+<symbol id="book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-3-10-2v14c4-1 7 0 10 2 3-2 6-3 10-2V4c-4-1-7 0-10 2Zm0 0v14"/></symbol>
+<symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+<symbol id="die-icon" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3" transform="rotate(-12 12 12)"/><g fill="currentColor" stroke="none"><circle cx="7.5" cy="9" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="16.5" cy="15" r="1.4"/></g></symbol>
+</svg>
+<main id="game">
+<div class="scenery" aria-hidden="true"><img id="scene-art-prev" alt=""><img id="scene-art" src="assets/scene0.webp" alt=""><div class="shade"></div><div class="fireflies"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+<header class="mast"><div class="signature"><svg class="lantern" aria-hidden="true"><use href="#lantern"/></svg><div><b>Maroca</b><small>Livro-jogo</small></div></div>
+<button id="help-button" class="quiet"><svg class="icon"><use href="#book"/></svg>Como jogar</button></header>
+<div class="story-wrap story-scroll"><figure id="result-plate" hidden><img id="result-illustration" alt=""></figure><section class="story">
+<div class="kicker"><span class="star" aria-hidden="true">✦</span><span id="eyebrow">Um lance de dados</span></div>
+<h1 id="scene-title"><span>A Chama</span><span>do Pampa</span></h1>
+<div id="scene-copy"><p>Uma aventura da Maroca pelos pampas do Rio Grande.</p></div>
+<p id="scene-question" hidden></p>
+<div class="actions"><button id="action" data-kind="start"><svg class="icon"><use href="#die-icon"/></svg><span id="action-label">Começar aventura</span><svg class="icon arrow"><use href="#arrow"/></svg></button><div id="die" aria-hidden="true"></div></div>
+</section></div>
+<footer class="journey"><div class="location"><svg class="icon"><use href="#map"/></svg><div><small>Trilha da Maroca</small><span id="position">Estância do Quero-Quero</span></div></div>
+<div class="tracks"><div class="trail-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span><b id="stop-count">0</b> / 9 paradas</span></div>
+<button id="map-button" class="quiet">Ver mapa<svg class="icon"><use href="#arrow"/></svg></button></footer>
+</main>
+<dialog id="overlay" aria-labelledby="overlay-title"><div class="overlay-content"><span class="star" aria-hidden="true">✦</span><h2 id="overlay-title"></h2><div id="overlay-copy"></div><button id="overlay-close">Voltar ao jogo</button></div></dialog>
+<div id="announcer" class="sr" role="status" aria-live="polite" aria-atomic="true"></div>
+<script src="data.js"></script><script src="game.js"></script>
+</body></html>
